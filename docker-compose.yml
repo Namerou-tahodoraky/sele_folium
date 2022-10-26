@@ -1,0 +1,17 @@
+version: "3"
+services:
+  selenium:
+    # image: selenium/standalone-chrome-debug:3.2.0-actinium
+    image: selenium/standalone-chrome:4.1.4-20220427
+    ports:
+      - 4444:4444
+      - 5900:5900
+#   app:
+#     build: ./app
+#     volumes:
+#       - ./app:/app
+#     environment:
+#       SELENIUM_URL: http://selenium:4444/wd/hub
+#     tty: true
+#     volumes:
+#       - /dev/shm:/dev/shm
