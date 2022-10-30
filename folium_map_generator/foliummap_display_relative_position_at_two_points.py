@@ -71,27 +71,3 @@ def create_map_display_relative_position_at_two_points(
             icon=folium.DivIcon(html=f"<b><font size='3'>height:{rel_dist_height_metre:.1f}m</font></b>"),
         ).add_to(m)
     return m
-
-
-
-
-# def create_map_with_some_coords(
-#         coords: list[tuple[float, float]],
-#     ) -> "folium.Map":
-#     if not coords:
-#         raise
-#     start_zoom_level = adjust_zoom_level(
-#         left_top_latlon=get_lefttop_coord(coords),
-#         right_bottom_latlon=get_rightbottom_coord(coords),
-#         width_map_size_pix=512,
-#         height_map_size_pix=512,
-#     )
-#     center_lat, center_lon = get_center_coord_by_area_size(coords)
-# 
-#     m = create_base_map(
-#         center_latlon=[center_lat, center_lon],
-#         start_zoom_level=start_zoom_level,
-#     )
-# 
-#     for lat, lon in coords:
-#         pass
