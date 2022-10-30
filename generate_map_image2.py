@@ -1,11 +1,12 @@
 import os
 from folium_screanshot.screanshot import AirialImageRenderBySelenium
-from folium_screanshot import map_generator
+import folium_map_generator
 
 
 if __name__ == '__main__':
-    base_point_lat, base_point_lon = [34.841023, 137.3243984]
+    base_point_lat, base_point_lon = [34.8412, 137.3246] #[34.841023, 137.3243984]
     base_point_direction_degree = 20
+    move_point_lat, move_point_lon = [34.841023, 137.3243984] #[34.8412, 137.3248]
     rel_dist_depth_metre = 40
     rel_dist_width_metre = 20
     rel_dist_height_metre = 10
@@ -17,10 +18,12 @@ if __name__ == '__main__':
     image_name = "sample.png"
     image_path = os.path.join("images", image_name)
 
-    folium_map = map_generator.create_map_display_relative_position_at_two_points(
+    folium_map = folium_map_generator.create_map_display_base_point_moving(
         base_point_lat=base_point_lat,
         base_point_lon=base_point_lon,
         base_point_direction_degree=base_point_direction_degree,
+        moved_point_lat=move_point_lat,
+        moved_point_lon=move_point_lon,
         rel_dist_depth_metre=rel_dist_depth_metre,
         rel_dist_width_metre=rel_dist_width_metre,
         rel_dist_height_metre=rel_dist_height_metre,

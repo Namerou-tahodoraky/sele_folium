@@ -62,7 +62,7 @@ class AirialImageRenderBySelenium:
         h = 650 # 小さくしすぎるとスクロールバーが表示されてしまう.
         driver.set_window_size(w, h)
         image_binary = BytesIO(driver.get_screenshot_as_png())
-        image_pil = Image.open(image_binary).crop((0, 0, 500, 500))
+        image_pil = Image.open(image_binary).crop((0, 0, 512, 512))
         return image_pil
 
     def valid_image_loaded(
